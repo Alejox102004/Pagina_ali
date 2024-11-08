@@ -1,0 +1,112 @@
+<div class="nav-bar">
+    <button class="menu-btn">=</button>
+    <nav class="nav-bar__nav">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicios">Aprende Con Nosotros</a></li>
+        <li><a href="#about">Quienes Somos</a></li>
+        <li><a href="#contact">Contactanos</a></li>
+        </ul>
+    </nav>
+</div>
+<style>
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    margin-top: 10px;
+    height: 50px; /* Ajusta la altura del nav-bar según prefieras */
+}
+
+.nav-bar__nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px; /* Añade espacio interno */
+    background-color: #ffffff;
+    
+    border-radius: 20px;
+}
+
+.nav-bar__nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size:large;
+    font-weight: bold;
+}
+
+.nav-bar__nav a:hover {
+    color: #3b3eee;
+    transition: 1s;
+    border-bottom:#3b3eee solid 1px ;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;  
+    text-align: left;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-bar {
+    flex-direction: column;
+    }
+    .nav-bar__nav ul {
+    display: none;
+}
+    .menu-btn {
+    display: block;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius:5px ;
+}
+
+.nav-bar__nav ul.active {
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    color: black;
+}
+.dropdown-menu {
+    position: static;
+}
+}
+</style>
