@@ -2,10 +2,10 @@
     <button class="menu-btn">=</button>
     <nav class="nav-bar__nav">
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#servicios">Aprende Con Nosotros</a></li>
-        <li><a href="#about">Quienes Somos</a></li>
-        <li><a href="#contact">Contactanos</a></li>
+            <li><a onclick="window.open('/', '_self')">Home</a></li>
+            <li><a onclick="window.open('/servicios', '_self')">Aprende Con Nosotros</a></li>
+        <li><a onclick="window.open('/about', '_self')">Quienes Somos?</a></li>
+        <li><a onclick="window.open('/contact', '_self')">Contactanos</a></li>
         </ul>
     </nav>
 </div>
@@ -19,8 +19,8 @@
     background-color: transparent;
     color: rgb(0, 0, 0);
     margin: auto;
-    margin-top: 10px;
-    height: 50px; /* Ajusta la altura del nav-bar según prefieras */
+    margin-top: 20px;
+    height: 10vh; /* Ajusta la altura del nav-bar según prefieras */
 }
 
 .nav-bar__nav {
@@ -34,23 +34,24 @@
     gap: 1.5rem;
     list-style: none;
     margin: 0;
-    padding: 10px 20px; /* Añade espacio interno */
-    background-color: #ffffff;
-    
+    padding: 2vh 20px; /* Añade espacio interno */
+    background-color: rgba(0, 4, 9, 0.6); /* Color negro con 80% de opacidad */
     border-radius: 20px;
+    font-size: 20px;
 }
 
 .nav-bar__nav a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-size:large;
+    color: rgb(255, 255, 255);
+    font-size:20px;
     font-weight: bold;
 }
 
 .nav-bar__nav a:hover {
-    color: #3b3eee;
-    transition: 1s;
-    border-bottom:#3b3eee solid 1px ;
+    color: #000000;
+    transition: 0.5s;
+    border-bottom:#000000 solid 1px ;
+    cursor: pointer;
 }
 
 .menu-btn {
