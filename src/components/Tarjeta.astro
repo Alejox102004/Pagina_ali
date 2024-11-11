@@ -1,0 +1,70 @@
+---
+interface Props{
+    name: string;
+    imagen: string;
+
+}
+const{name,imagen}=Astro.props
+---
+
+<div class="tarjeta">
+    <div>
+        <img src={imagen} alt="foto">
+    </div>
+    <h2>{name}</h2>
+</div>
+
+
+<style>
+.tarjeta {
+    background-color: rgba(0, 4, 9, 0.6);
+    border-radius: 10px;
+    border: 1px black solid;
+    width: 20%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column; /* Acomoda la imagen y el nombre en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: space-between; /* Separa la imagen y el nombre */
+    padding: 10px;
+}
+
+.tarjeta img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Redondea las esquinas de la imagen */
+}
+
+.tarjeta h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px; /* Separa el nombre de la imagen */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Media Queries para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .tarjeta {
+        width: 40%; /* Reduce el tamaño de la tarjeta a un 40% del ancho en pantallas más pequeñas */
+    }
+
+    .tarjeta h2 {
+        font-size: 1.2rem; /* Ajusta el tamaño de la fuente en pantallas más pequeñas */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .tarjeta {
+        width: 80%; /* Hace que la tarjeta ocupe el 80% del ancho en dispositivos móviles */
+    }
+
+    .tarjeta h2 {
+        font-size: 1rem; /* Reduce aún más el tamaño de la fuente para móviles */
+    }
+}
+
+</style>

@@ -1,6 +1,103 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Tarjeta from "../components/Tarjeta.astro";
+import Footer from "../components/Footer.astro";
 ---
 <Layout title="Quienes somos?">
-
+    <Navbar/>
+    <div class="main">
+    <div class="seccion">
+        <div class="info-contenedor">
+            <h1>¿Quien es FinWise?</h1>
+            <p>FinWise es un equipo de educación financiera que empodera a las personas para tomar decisiones inteligentes sobre ahorro, inversión y finanzas personales, ayudándoles a construir un futuro económico seguro.</p>
+            <br>
+        </div>
+    </div>
+    <div class="seccion2">
+        <h2>El Equipo FinWise</h2>
+    </div>
+    <div class="contenedor">
+        <Tarjeta name="Alison Pantoja" imagen="/alis.jpg"></Tarjeta>
+        <Tarjeta name="Kerly Carabali" imagen="/kerñy.jpg"></Tarjeta>
+        <Tarjeta name="Nayeli Castillo" imagen="/Nayeli.jpg"></Tarjeta>
+        <Tarjeta name="Cristian Morales" imagen="/cris.jpg"></Tarjeta>
+        <Tarjeta name="Cindy Otavalo" imagen="/cindy.jpg"></Tarjeta>
+        <Tarjeta name="Melanie Espín" imagen="/melani.jpeg"></Tarjeta>
+        <Tarjeta name="Karen Cabascango" imagen="/Nayeli.jpg"></Tarjeta>
+    </div>
+</div>
+<Footer tik="sasas" image="/logo.png"></Footer>
 </Layout>
+
+<style>
+    
+    .main{
+        width: 100%;
+    }
+    h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+        color:black;
+    }
+	
+	p{
+		font-size: 1.5rem;
+	}
+.contenedor{
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center;     /* Centra los elementos verticalmente */
+    width: 70%;
+    margin: 0 auto;          /* Centra el contenedor dentro de su contenedor padre */
+    flex-wrap: wrap; 
+}
+
+.seccion2{
+    width: 100%;
+    text-align: center;
+}
+
+.seccion2 h2{
+    font-size: 1.9rem;
+}
+
+.info-contenedor {
+    width: 80%;
+    margin: auto;
+    margin-top: 10vh;
+    
+}
+
+.info-contenedor p {
+    width: 40%;
+    margin: auto;
+    text-align: justify;
+}
+
+/* Media Queries para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    .info-contenedor {
+        width: 90%; /* Ajusta el ancho del contenedor para pantallas medianas */
+    }
+
+    .info-contenedor p {
+        width: 70%; /* Aumenta el ancho del párrafo para mejorar la lectura */
+    }
+}
+
+/* Media Queries para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .info-contenedor {
+        width: 95%; /* Casi todo el ancho disponible para pantallas pequeñas */
+    }
+
+    .info-contenedor p {
+        width: 90%; /* Amplía el párrafo para ocupar más espacio en móviles */
+        font-size: 14px; /* Ajusta el tamaño de la fuente para mejorar la legibilidad */
+    }
+}
+</style>

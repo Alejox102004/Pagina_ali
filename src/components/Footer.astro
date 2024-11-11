@@ -1,0 +1,137 @@
+--- 
+interface Props {
+    tik: string;
+    image: string;  // Agregar la propiedad para la imagen
+}
+const { tik, image } = Astro.props;
+---
+
+<div class="main">
+    <div class="interior">
+        <h2>Contactanos</h2>
+    </div>
+    <!-- Footer dentro del mismo contenedor -->
+    <footer class="footer">
+        <div class="footer-left">
+            <img src={image} alt="Logo" class="footer-image" />
+        </div>
+        <div class="footer-right">
+            <h3>Siguenos en nuestras redes sociales:</h3>
+            <div class="footer-links">
+                <!-- Enlace a TikTok con el SVG del logo -->
+                <a href={tik} target="_blank">
+                    <img src="/tiktok.svg" alt="TikTok Logo" class="tiktok-logo" />
+                    FinWise
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<style>
+    * {
+        box-sizing: border-box;  /* Asegura que el padding y el margen no afecten el ancho total */
+    }
+
+    .main {
+        background-color: rgba(0, 4, 9, 0.6);
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 20px;  /* Espacio adicional para el footer */
+        overflow-x: hidden;  /* Elimina el desplazamiento horizontal */
+    }
+
+    .interior {
+        width: 80%;
+        text-align: center;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between; /* Espacio entre los elementos */
+        align-items: center;
+        color: white;
+        width: 100%; /* El footer ocupa todo el ancho del contenedor principal */
+        padding: 10px 20px; /* Agrega algo de espaciado dentro del footer */
+        box-sizing: border-box;  /* Asegura que el padding no sume al ancho total */
+        flex-wrap: wrap;  /* Permite que los elementos se apilen en pantallas pequeñas */
+    }
+
+    .footer-left {
+        width: 30%;  /* Ancho para la imagen */
+        display: flex;
+        justify-content: center; /* Centra la imagen */
+        margin-bottom: 10px;  /* Añade un margen para evitar que el contenido se amontone en pantallas pequeñas */
+    }
+
+    .footer-right {
+        width: 60%;  /* Ancho para las redes sociales */
+        display: flex;
+        flex-direction: column;
+        padding-right: 10%;
+        margin-bottom: 10px;  /* Añade un margen para evitar que el contenido se amontone */
+    }
+
+    .footer-left img {
+        max-width: 100%;
+        height: 20vh;
+        border-radius: 10px;
+    }
+
+    .footer-right h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;  /* Alinea el logo con el texto */
+    }
+
+    .footer-links a:hover {
+        color: #ffcc00; /* Cambio de color al pasar el ratón */
+    }
+
+    .tiktok-logo {
+        width: 25px; /* Ajusta el tamaño del logo */
+        height: auto;
+        margin-right: 10px;  /* Espacio entre el logo y el texto */
+    }
+
+    /* Medios para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .footer-left,
+        .footer-right {
+            width: 100%;  /* Ambos ocupan el 100% en pantallas pequeñas */
+            text-align: center;  /* Centra el texto en pantallas pequeñas */
+            padding-right: 0;  /* Elimina el padding derecho */
+        }
+
+        .footer-right {
+            order: 1;  /* Asegura que el contenido de la derecha aparezca después de la imagen */
+            padding-top: 20px;
+        }
+
+        .footer-left img {
+            height: auto;  /* Deja que la imagen se ajuste automáticamente */
+            max-height: 15vh;  /* Ajusta el tamaño máximo de la imagen */
+        }
+
+        .footer-links a {
+            font-size: 1rem;  /* Ajusta el tamaño de la fuente en pantallas pequeñas */
+        }
+
+        .tiktok-logo {
+            width: 20px;  /* Reduce el tamaño del logo en pantallas pequeñas */
+        }
+    }
+</style>
