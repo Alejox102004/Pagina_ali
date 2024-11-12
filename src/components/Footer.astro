@@ -9,23 +9,28 @@ const { tik, image } = Astro.props;
 <div class="main">
     <!-- Footer con imagen de fondo -->
     <footer class="footer">
-        <div class="interior">
-            <h2>Contactanos</h2>
-        </div>
         <div class="footer-left">
             <img src={image} alt="Logo" class="footer-image" />
         </div>
         <div class="footer-right">
-            <h3>Siguenos en nuestras redes sociales:</h3>
+            <h3>¡Síguenos en nuestras redes sociales!</h3>
             <div class="footer-links">
                 <!-- Enlace a TikTok con el SVG del logo -->
                 <a href={tik} target="_blank">
                     <img src="/tiktok.svg" alt="TikTok Logo" class="tiktok-logo" />
                     FinWise
                 </a>
+                <!-- Agregar más enlaces a redes sociales -->
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="/youtube.svg" alt="Youtube Logo" class="tiktok-logo" />
+                    FinWise
+                </a>
             </div>
         </div>
     </footer>
+    <div class="copi">
+        <p>© 2024 FinWise. Todos los derechos reservados.</p>
+    </div>
 </div>
 
 <style>
@@ -51,6 +56,33 @@ const { tik, image } = Astro.props;
     .interior h2 {
         font-size: 2rem;
         margin-bottom: 0;
+    }
+
+    .copi p {
+        font-size: 1.2rem;
+        margin-top: 0;
+        text-align: center;
+        display: flex;
+    }
+/** Necesito que mi p del copi este en el centro de la pagina*/
+    .copi p {
+        width: 100%;
+        color: white;
+        padding: px 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .copi {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: px 0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
     }
 
     footer.footer {
@@ -117,12 +149,20 @@ const { tik, image } = Astro.props;
         .footer-right {
             width: 100%;
             text-align: center;
-            padding-right: ;
+            padding-right: 10px;
         }
 
         .footer-right {
             order: 1;
-            padding-top: 20px;
+            padding-top: 0px;
+        }
+
+        .footer-left {
+            margin-bottom: 0;
+        }
+
+        .footer-right h3 {
+            margin-top: 0;
         }
 
         .footer-left img {
