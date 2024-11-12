@@ -201,4 +201,24 @@ li {
     }
 }
 
+@media (max-width: 768px) {
+    .encabezado img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Ajusta el tamaño y disposición para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .encabezado {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .encabezado img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 </style>

@@ -2,9 +2,10 @@
 interface Props{
     name: string;
     imagen: string;
+    correo: string;
 
 }
-const{name,imagen}=Astro.props
+const{name,imagen,correo}=Astro.props
 ---
 
 <div class="tarjeta">
@@ -12,14 +13,14 @@ const{name,imagen}=Astro.props
         <img src={imagen} alt="foto">
     </div>
     <h2>{name}</h2>
+    <p>{correo}</p>
 </div>
 
 
 <style>
 .tarjeta {
-    background-color: rgba(0, 4, 9, 0.6);
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    border: 1px black solid;
     width: 20%;
     height: auto;
     margin: auto;
@@ -35,16 +36,26 @@ const{name,imagen}=Astro.props
     width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 8px; /* Redondea las esquinas de la imagen */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4); /* Agrega una sombra suave */
 }
 
 .tarjeta h2 {
     font-size: 1.5rem;
-    color: white;
+    color: black;
     margin-top: 10px; /* Separa el nombre de la imagen */
     text-align: center;
     font-weight: bold;
+    margin-bottom:0 ;
 }
 
+.tarjeta p{
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+    padding: 0;
+
+}
 /* Media Queries para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
     .tarjeta {

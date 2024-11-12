@@ -15,16 +15,16 @@ import Footer from "../components/Footer.astro";
         </div>
     </div>
     <div class="seccion2">
-        <h2>El Equipo FinWise</h2>
+        <h2>Equipo FinWise</h2>
     </div>
     <div class="contenedor">
-        <Tarjeta name="Alison Pantoja" imagen="/alis.jpg"></Tarjeta>
-        <Tarjeta name="Kerly Carabali" imagen="/kerñy.jpg"></Tarjeta>
-        <Tarjeta name="Nayeli Castillo" imagen="/Nayeli.jpg"></Tarjeta>
-        <Tarjeta name="Cristian Morales" imagen="/cris.jpg"></Tarjeta>
-        <Tarjeta name="Cindy Otavalo" imagen="/cindy.jpg"></Tarjeta>
-        <Tarjeta name="Melanie Espín" imagen="/melani.jpeg"></Tarjeta>
-        <Tarjeta name="Karen Cabascango" imagen="/Nayeli.jpg"></Tarjeta>
+        <Tarjeta name="Alison Pantoja" imagen="/alis.jpg" correo="abpantojap@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Kerly Carabali" imagen="/kerñy.jpg"correo="kacarvaliv@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Nayeli Castillo" imagen="/naye.jpg"correo="nlcastilloj@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Cristian Morales" imagen="/cris.jpg"correo="cimoralesr@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Cindy Otavalo" imagen="/cindy.jpg"correo="caotavaloc@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Melanie Espín" imagen="/melani.jpeg" correo="mbespinz@utn.edu.ec"></Tarjeta>
+        <Tarjeta name="Karen Cabascango" imagen="/karen.jpg" correo="kpcabascangod@utn.edu.ec"></Tarjeta>
     </div>
 </div>
 <Footer tik="https://www.tiktok.com/@finwisecu?_t=8rINwv49GsC&_r=1" image="/logo.png"></Footer>
@@ -82,6 +82,7 @@ import Footer from "../components/Footer.astro";
 @media (max-width: 768px) {
     .info-contenedor {
         width: 90%; /* Ajusta el ancho del contenedor para pantallas medianas */
+        margin-top: 0;
     }
 
     .info-contenedor p {
@@ -89,10 +90,15 @@ import Footer from "../components/Footer.astro";
     }
 }
 
+    .info-contenedor h1{
+        margin-top: 0;
+    }
 /* Media Queries para pantallas pequeñas (móviles) */
 @media (max-width: 480px) {
     .info-contenedor {
         width: 95%; /* Casi todo el ancho disponible para pantallas pequeñas */
+        margin-top: 0;
+
     }
 
     .info-contenedor p {
