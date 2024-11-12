@@ -25,6 +25,12 @@ const { tik, image } = Astro.props;
                     <img src="/youtube.svg" alt="Youtube Logo" class="tiktok-logo" />
                     FinWise
                 </a>
+                                <!-- Agregar enlace a Quizziz -->
+                <a href="https://quizizz.com/join/quiz/6731796de7603c7ab7be6c63/start?studentShare=true" target="_blank">
+                    <img src="https://getlogovector.com/wp-content/uploads/2023/03/quizizz-logo-vector.png" alt="Quizziz Logo" class="tiktok-logo" />
+                    Vamos a jugar.
+                </a>
+
             </div>
         </div>
     </footer>
@@ -115,7 +121,7 @@ const { tik, image } = Astro.props;
 
     .footer-right .footer-links {
         display: flex;
-        margin-left: 60px;
+        margin-left: -20px;
     }
 
     .footer-left img {
@@ -154,12 +160,13 @@ const { tik, image } = Astro.props;
         .footer-right {
             width: 100%;
             text-align: center;
-            padding-right: 10px;
+            padding-right: 0px;
         }
 
         .footer-right {
             order: 1;
             padding-top: 0px;
+
         }
 
         .footer-left {
@@ -173,6 +180,7 @@ const { tik, image } = Astro.props;
         .footer-left img {
             height: auto;
             max-height: 15vh;
+            
         }
 
         .footer-links a {
